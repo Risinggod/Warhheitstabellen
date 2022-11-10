@@ -1,0 +1,32 @@
+======NAND=====================
+|A:  |B:   |C:  
++----+-----+----
+False|True|False
+False|True|False
+False|True|False
+======AND=======================
+|A:  |B:   |C:  
++----+-----+----
+False|False|<class 'bytes'>
+False|True|<class 'bytes'>
+True|False|<class 'bytes'>
+True|True|<class 'bytes'>
+======or=======================
+|A:  |B:   |C:  
++----+-----+----
+False|False|<class 'bytes'>
+False|True|<class 'bytes'>
+True|False|<class 'bytes'>
+True|True|<class 'bytes'>
+======NOT=======================
+|A:  |B:   |C:  
++----+-----+----
+False|False|False
+True|False|False
+======NOR=======================
+|A:  |B:   |C:  
++----+-----+----
+False|False|False
+False|True|False
+True|False|False
+True|True|False
