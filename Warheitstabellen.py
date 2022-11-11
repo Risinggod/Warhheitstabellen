@@ -1,27 +1,46 @@
-fileWriter = open("tabellen.txt", "wt")
-#Funktionnen
-
 def warheitswert(a, b, x ):
     fileWriter.write(str(a) + "|" + str(b) + "|" + str(x) + "\n")
 
-a=bytes
-b=bytes
-x=bytes
-
 def tabelle(warhetswert):
     fileWriter.write( warhetswert )
-    fileWriter.write("======\n")
+    fileWriter.write("\n")
     fileWriter.write("|A:  |B:   |C:  \n")
     fileWriter.write("+----+-----+----\n")
 
+def print_nand():
+    a = False
+    b = False
+    warheitswert(a, b, not (a and b))
+
+    b = True
+    warheitswert(a, b, not (a and b))
+
+    a = True
+    b = False
+    warheitswert(a, b, not (a and b))
+
+    b = True
+    warheitswert(a, b, not (a and b))
+
+
+fileWriter = open("tabellen.txt", "wt")
+#Funktionnen
+#x=bytes
+
+
+
 #nand
 fileWriter = open("tabellen.txt", "at")
-tabelle("======NAND")
+tabelle("======NAND=======")
+print_nand()
 
-warheitswert(False, False, not(a and b))
-warheitswert(False, True, not(a and b))
-warheitswert(True, False, not(a and b))
-warheitswert(True, True, not(a and b))
+a=bytes
+b=bytes
+
+a = False
+b = False
+
+
 
 fileWriter.close()
 
@@ -29,7 +48,7 @@ fileWriter.close()
 fileWriter = open("tabellen.txt", "at")
 tabelle("======AND")
 
-warheitswert(False, False, a and b)
+warheitswert(False, False, (a and b))
 warheitswert(False, True, a and b)
 warheitswert(True, False, a and b)
 warheitswert(True, True, a and b)
@@ -49,8 +68,8 @@ fileWriter.close()
 fileWriter = open("tabellen.txt", "at")
 tabelle("======NOT")
 
-warheitswert(False, not a, not x)
-warheitswert(True, not a,  not x)
+warheitswert(False, not a, not a)
+warheitswert(True, not a,not a)
 
 fileWriter.close()
 #NOR
